@@ -101,3 +101,15 @@
   - not bounded by any polynomial n
   - Even not bounded by any exponential form k^n, where k is a constant
   - It is proved to be an unsolved problem 
+* A refinement
+  - keep track of unguarded squares by using three bool array: col_free, upward_free, downward_free
+    - Diagonals from th elower lefr to the upper left area called upwards diagonals
+    - Diagonals from the upper left to the lower right area called downward diagonals
+  - <img width="540" alt="Screen Shot 2022-06-14 at 6 50 21 PM" src="https://user-images.githubusercontent.com/89602311/173707886-841da71a-35a4-4f38-bcdc-d03dccabab26.png">
+  - <img width="551" alt="Screen Shot 2022-06-14 at 6 50 53 PM" src="https://user-images.githubusercontent.com/89602311/173707933-56232caf-aabf-49d7-8f32-b71221fc8356.png">
+## Self Test
+* Can you get all possible r-combinations?
+  - An r-combination of elements of a set is an unordered selection of r elements from the set
+  - An r-combination is simply a subset of the set r elements
+  - The number of 𝑟 -combinations of a set with n distinct elements is denoted by C(n, r),  or (n r) (supposed to be a column, rather than a row)
+    - The 2-combinations of set S = {a, b, c, d} are {a,b}, {a,c}, {a,d}, {b,c}, {b,d} and {c,d}. Hence C(n,r) = 6
