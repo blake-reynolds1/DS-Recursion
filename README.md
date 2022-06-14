@@ -40,4 +40,64 @@
     - but this will help improving your skills
   - Optional
 ## Analysis of Backtracking
-* 
+* Just think about the property of permutation
+  - A string of length n! permutation
+* The time complexity is above n!
+  - This algorithm is very slow
+  - This function grows the fastest, among which we have learned in Discrete Structures
+    - Evaluation function grows fast means the algorithm is slow
+  - This is required by the problem naturally
+## Keys of Backtracking
+* Backtracking algorithms
+  - search for a solution by
+    - constructing partial solutions that remain consistent with the requirements of the problem, and then
+    - extending a partial solution toward completion
+    - And recovering to peer partial solution could be needed
+  - When inconsistency occurs, the algorithms backs up (backtracks) by
+    - removing the most recently constructed part of the solution, and then
+    - trying another possibility
+## Eight-Queens Puzzle
+* How to place eight queens on a chess board so that no queen can take another
+  - Remember that in chess, a queen can take another piece that lies on the same row, column or the same diagnol
+* <img width="543" alt="Screen Shot 2022-06-14 at 5 55 26 PM" src="https://user-images.githubusercontent.com/89602311/173702623-5bd6f905-2f7f-4921-a22d-1f0902287df1.png">
+* X: Gaurded sqaures
+* ?: Other squares that have not been tried
+* A simplier version: 4-Queens
+* <img width="557" alt="Screen Shot 2022-06-14 at 5 56 25 PM" src="https://user-images.githubusercontent.com/89602311/173702742-bc9de723-de48-432e-bdbe-0ea7c1f5116d.png">
+* Solutions do exist
+  - requires luck coupled with trial and error
+  - exhaustive computation
+  - <img width="430" alt="Screen Shot 2022-06-14 at 6 03 45 PM" src="https://user-images.githubusercontent.com/89602311/173703390-e01777f2-db64-483c-8a7e-e8ade2142b1c.png">
+* How will you solve the problem?
+  - Put the queens on the board one by one in some systematic/logical order
+    - Make sure that you will not revisit the same situation
+    - The whole process is suitable for recursive programming
+      - A large problem can be divided into small subproblems with a similar nature
+  - Make sure that the queen placed will not be taken by another already on the board
+  - If you are lucky to put eight queens on the board, one solution is found
+  - Otherwise, some queens need to be removed and placed elsewhere to continue the search for a solution
+* How to find the next square to try?
+  - There must be a queen, exactly one in each row
+    - There can never be more than one queen in a row
+  - Therefore we can place the queens one row at a time in order
+    - What we have decided is actually a systematic way to solve the problem
+  - <img width="284" alt="Screen Shot 2022-06-14 at 6 07 11 PM" src="https://user-images.githubusercontent.com/89602311/173703682-859aec37-a602-41cd-8c4c-53f6dbda213c.png">
+* Program Outline
+  - Recursive function: solve_from
+    - Given a configuration of queens on the chessboard, search for all solutions
+  - Class Queens
+    - Represent a particular configuration of queens on the chessboard
+  - Code Outline
+    - <img width="506" alt="Screen Shot 2022-06-14 at 6 08 36 PM" src="https://user-images.githubusercontent.com/89602311/173703819-48df6a1b-bbc9-4aa2-b53f-16feb3c45dc4.png">
+  - <img width="573" alt="Screen Shot 2022-06-14 at 6 08 55 PM" src="https://user-images.githubusercontent.com/89602311/173703853-3c5bd1a6-4e6d-4716-9345-87236e444f70.png">
+  - <img width="569" alt="Screen Shot 2022-06-14 at 6 10 09 PM" src="https://user-images.githubusercontent.com/89602311/173703976-3067dca7-e38e-45ca-bdf4-386d09d92f85.png">
+  - <img width="544" alt="Screen Shot 2022-06-14 at 6 10 31 PM" src="https://user-images.githubusercontent.com/89602311/173704003-af1d4268-0563-40b7-a7ed-db5d92394055.png">
+  - <img width="540" alt="Screen Shot 2022-06-14 at 6 10 42 PM" src="https://user-images.githubusercontent.com/89602311/173704030-b26c273c-09a1-437a-a915-3adfb2e1dba1.png">
+  - <img width="557" alt="Screen Shot 2022-06-14 at 6 10 58 PM" src="https://user-images.githubusercontent.com/89602311/173704055-6fdaaa53-fc4a-4c3e-ba54-bb34713ad9e9.png">
+  - <img width="528" alt="Screen Shot 2022-06-14 at 6 11 15 PM" src="https://user-images.githubusercontent.com/89602311/173704066-c96a8b4b-9489-4f7d-82b0-4e3b68f5a562.png">
+* The time increases rapidly with the board size
+  - exponential growth
+* Number of solutions
+  - not bounded by any polynomial n
+  - Even not bounded by any exponential form k^n, where k is a constant
+  - It is proved to be an unsolved problem 
