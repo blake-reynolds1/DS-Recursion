@@ -14,7 +14,7 @@
 * An ordered arrangement of r elements of a set is called an 𝑟 -permutation.
   - A string of length n has n! permutation
 * The number of r - permutations of a set with n elements is denoted by P(n, r)
-  - The 2-permutations of 𝑆 ൌ ሼ1,2,3ሽ are 1,2; 1,3; 2,1; 2,3; 3,1; and 3,2. Hence, 𝑃(3,2) = 6
+  - The 2-permutations of s = {1,2,3} are 1,2; 1,3; 2,1; 2,3; 3,1; and 3,2. Hence, P(3,2) = 6
   - P(n, r) = n(n-1)... (n -r + 1) = n!/(n-r)
 * <img width="745" alt="Screen Shot 2022-06-14 at 4 48 09 PM" src="https://user-images.githubusercontent.com/89602311/173695208-6cecceb6-f88b-45a7-a4a7-97923377cba2.png">
 * Question
